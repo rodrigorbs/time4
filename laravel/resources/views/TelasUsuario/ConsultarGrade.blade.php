@@ -84,7 +84,7 @@
         </div>
       </div>
       <div class="col-md-12">
-        <button type="button" class="btn btn-danger" name="Voltar"> Voltar </button>
+        <a href="/home" class="btn btn-danger">Voltar</a>
       </div>
     </div>
 

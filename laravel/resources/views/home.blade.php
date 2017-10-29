@@ -8,13 +8,10 @@
                 <div class="panel-heading">Dashboard</div>
 
                 <div class="panel-body">
-                    @if (session('status'))
-                        <div class="alert alert-success">
-                            {{ session('status') }}
-                        </div>
-                    @endif
+                    Bem vindo!<br>
 
-                    You are logged in!
+                    <a href="/grade" class="btn btn-primary">Consultar Grade</a>
+                    <a href="/sala" class="btn btn-primary">Localizar Sala</a>
                 </div>
             </div>
         </div>

@@ -12,8 +12,19 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('TelasAdministrativo.Administrativo');
 });
+
+Route::get('/grade', function () {
+    return view('TelasUsuario.ConsultarGrade');
+});
+
+Route::get('/sala', function () {
+    return view('TelasUsuario.LocalizarSala');
+});
+
+Route::get('bloco/criar','BlocoController@criar');
+Route::get('campus/criar','CampusController@criar');
 
 Auth::routes();
 
