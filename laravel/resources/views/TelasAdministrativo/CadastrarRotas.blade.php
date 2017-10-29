@@ -42,6 +42,9 @@
             <textarea class="form-control" rows="5" id="orientacao"></textarea>
           </div>
         </form>
+        <button type="button" class="btn btn-primary">Incluir
+          <span class="glyphicon glyphicon-ok"></span>
+        </button>
       </div>
     </div>
 
@@ -51,9 +54,9 @@
         <table class="table">
           <thead>
             <tr>
-              <th>Codigo</th>
-              <th>Nome</th>
-              <th>Logradouro</th>
+              <th>Origem</th>
+              <th>Salas</th>
+              <th>Orientação</th>
               <th>Ação</th>
             </tr>
           </thead>
@@ -85,6 +88,6 @@
       </div>
       <button type="button" class="btn btn-danger" name="sair"> Sair </button>
     </div>
-    
+
   </body>
 </html>
