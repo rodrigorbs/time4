@@ -3,14 +3,16 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Bloco;
-
 
 class BlocoController extends Controller
 {
+    public function index()
+    {
+    	return view('pages.bloco.index');
+    }
 
-
-  public function criar() {
-      return view('criarBloco');
-  }
+    public function formulario()
+    {
+    	return view('pages.bloco.formulario');
+    }
 }

@@ -11,21 +11,23 @@
 |
 */
 
-Route::get('/', function () {
-    return view('TelasAdministrativo.Administrativo');
-});
+Route::get('/',['as' =>'root','uses'=>function (){
 
-Route::get('/grade', function () {
-    return view('TelasUsuario.ConsultarGrade');
-});
+    if (Auth::check()){
+        return redirect()->route('dashboard');
+    }
+    else{
+        return view('auth.login');
+    }
 
-Route::get('/sala', function () {
-    return view('TelasUsuario.LocalizarSala');
-});
-
-Route::get('bloco/criar','BlocoController@criar');
-Route::get('campus/criar','CampusController@criar');
+}]);
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+require_once base_path('routes/imports/imageUpload.php');
+require_once base_path('routes/imports/dashboard.php');
+require_once base_path('routes/imports/campus.php');
+require_once base_path('routes/imports/bloco.php');
+require_once base_path('routes/imports/sala.php');
+require_once base_path('routes/imports/rota.php');
+require_once base_path('routes/imports/grade.php');
