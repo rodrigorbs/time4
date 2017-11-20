@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Campus;
 class CampusController extends Controller
 {
   public function index()
@@ -13,7 +13,7 @@ class CampusController extends Controller
 
     public function formulario()
       {
-  		return view('pages.campus.formulario');
+  		return view('pages.campus.formulario', array('campus' => $ncampus));
       }
 
 }

@@ -24,9 +24,12 @@
                   <label>Campus</label>
                   <select class="browser-default">
                     <option value="" disabled selected>Selecione</option>
-                    <option value="1">Option 1</option>
+										@foreach ($blocos as $bloco)
+												<option value= "{{$bloco->id}}">{{$bloco->nameBlocos}}</option>
+										@endforeach
+<!--                    <option value="1">Option 1</option>
                     <option value="2">Option 2</option>
-                    <option value="3">Option 3</option>
+                    <option value="3">Option 3</option> -->
                   </select>
 
                   <div class="input-field col s6">

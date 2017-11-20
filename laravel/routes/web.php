@@ -11,6 +11,7 @@
 |
 */
 
+
 Route::get('/',['as' =>'root','uses'=>function (){
 
     if (Auth::check()){
