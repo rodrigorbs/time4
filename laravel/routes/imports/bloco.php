@@ -6,8 +6,14 @@ Route::get('/bloco', [
            'uses'          => 'BlocoController@index'
         ]);
 
-Route::get('/bloco/formulario', [
+Route::get('/bloco/create', [
            'as'            => 'bloco',
 	       'middleware'    => 'auth',
            'uses'          => 'BlocoController@formulario'
         ]);
+
+        Route::post('/bloco/create', [
+                   'as'            => 'bloco',
+        	       'middleware'    => 'auth',
+                   'uses'          => 'BlocoController@store'
+                ]);

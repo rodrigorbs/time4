@@ -15,15 +15,20 @@ class BlocoController extends Controller
     public function formulario()
     {
       $campus = Campus::all();
+      $bloco = new Bloco();
     	return view('pages.bloco.create', array('campus' => $campus));
     }
+
     public function store(Request $request){
       $bloco = new Bloco();
-      $bloco->nameBlocos = $request->input('nameBlocos');
-      $bloco->qtdAndares = $request->input('qtdAndares');
-      $bloco->campus_idCampus = $request->input('campus_idCampus');
+      if($request->has('idBlocos')){
+        $aluno =Aluno::find($request->id);
+      }
+        $bloco->nameBlocos = $request->input('nameBlocos');
+        $bloco->qtdAndares = $request->input('qtdAndares');
         if($bloco->save()){
-          return redirect('bloco');
+          $request->session()->flash('Concluído!!!', 'Bloco Cadastrado!!');
+                            return redirect('bloco');
+              }
         }
-    }
 }

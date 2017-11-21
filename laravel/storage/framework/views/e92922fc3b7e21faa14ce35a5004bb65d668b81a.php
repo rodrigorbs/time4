@@ -20,6 +20,10 @@
 </head>
 
 <body class="login-container bg-slate-800" >
+  <?php echo e(Html::script('js/jquery-3.1.1.min.js')); ?>
+
+  <?php echo e(Html::script('js/bootstrap.imn.js')); ?>
+
 <!-- Page container -->
 <div class="page-container">
     <!-- Page content -->
