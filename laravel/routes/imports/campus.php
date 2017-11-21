@@ -11,3 +11,6 @@ Route::get('/campus/formulario', [
 	       'middleware'    => 'auth',
            'uses'          => 'CampusController@formulario'
         ]);
+Route::post('/campus/salvar', 'CampusController@salvar');
+Route::get('/campus/{id}/editar', 'CampusController@editar');
+Route::get('/campus/{id}/remover', 'CampusController@remover');

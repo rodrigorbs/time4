@@ -21,35 +21,38 @@
             <div class="card hoverable">
               <div class="card-content">
                 <div class="row">
+                  <div class="input-field col s8">
+                    <input name="idCampus" type="hidden" value="{{$campus->id}}">
+                  </div>
 
                   <div class="input-field col s8">
-                    <input name="nomeCampus" type="text" class="validate">
+                    <input name="nomeCampus" type="text" class="validate" value="{{$campus->nomeCampus}}">
                     <label for="last_name">Nome do Campus</label>
                   </div>
 
                   <div class="input-field col s6">
-                    <input name="logradouro" type="text" class="validate">
-                    <label for="last_name">Logradoura</label>
+                    <input name="logradouro" type="text" class="validate" value="{{$campus->logradouro}}">
+                    <label for="last_name">Logradouro</label>
                   </div>
 
                   <div class="input-field col s6">
-                    <input name="cidade" type="text" class="validate">
+                    <input name="cidade" type="text" class="validate" value="{{$campus->cidade}}">
                     <label for="last_name">Cidade</label>
                   </div>
 
                   <div class="input-field col s6">
-                    <input name="cep" type="text" class="validate">
+                    <input name="cep" type="text" class="validate" value="{{$campus->cep}}">
                     <label for="last_name">CEP</label>
                   </div>
 
                   <div class="input-field col s2">
-                    <input name="uf" type="text" class="validate">
+                    <input name="uf" type="text" class="validate" value="{{$campus->uf}}">
                     <label for="last_name">UF</label>
                   </div>
 
 
                   <div class="input-field col s6">
-                    <input name="telefone" type="text" class="validate">
+                    <input name="telefone" type="text" class="validate" value="{{$campus->telefone}}">
                     <label for="last_name">Telefone</label>
                   </div>
 
