@@ -10,7 +10,7 @@ Localize
     <div class="card">
       <div class="card-content">
 
-        <a href="#"><h3 align="center">Localizar Sala</h3></a>
+        <a href="/consultarSala"><h3 align="center">Localizar Sala</h3></a>
 
       </div>
     </div>
@@ -20,7 +20,7 @@ Localize
     <div class="card">
       <div class="card-content">
 
-        <a href="#"><h3 align="center">Consultar Grades de Horarios</h3></a>
+        <a href="/consultarGrade"><h3 align="center">Consultar Grades</h3></a>
 
       </div>
     </div>

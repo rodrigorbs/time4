@@ -32,3 +32,5 @@ require_once base_path('routes/imports/sala.php');
 require_once base_path('routes/imports/rota.php');
 require_once base_path('routes/imports/grade.php');
 require_once base_path('routes/imports/usuario.php');
+require_once base_path('routes/imports/consultarSala.php');
+require_once base_path('routes/imports/consultarGrade.php');
