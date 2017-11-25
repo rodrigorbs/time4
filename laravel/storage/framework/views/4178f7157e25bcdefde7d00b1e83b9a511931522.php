@@ -8,20 +8,24 @@
 
 <?php $__env->startSection('conteudo'); ?>
 
-<label>Campus</label>
-<?php if(count($campus) > 1): ?>
-<?php $__currentLoopData = $campus; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $ncampus): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-			<select class="browser-default" name="selecao">
-							<option value= "<?php echo e($ncampus->id); ?>"><?php echo e($ncampus->nameCampus); ?></option>
-      </select>
-<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-
-<?php else: ?>
-<select class="browser-default" name="selecao">
-		<option value="" disabled selected>Selecione</option>
-</select>
-
+<?php if(count($errors) > 0): ?>
+	<div class="alert alert-danger">
+			<ul>
+					<?php $__currentLoopData = $errors->all(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $error): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+							<li><?php echo e($error); ?></li>
+					<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+			</ul>
+	</div>
 <?php endif; ?>
+<label>Campus</label>
+
+<select class="browser-default" name="selecao">
+<?php $__empty_1 = true; $__currentLoopData = $campus; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $ncampus): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); $__empty_1 = false; ?>
+							<option value= "<?php echo e($ncampus->id); ?>"><?php echo e($ncampus->nomeCampus); ?></option>
+<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); if ($__empty_1): ?>
+		<option value="" disabled selected>Selecione</option>
+<?php endif; ?>
+</select>
 
 <?php echo e(Form::open(['action' => 'BlocoController@store','method' => 'post'])); ?>
 
@@ -33,6 +37,7 @@
 
 <?php echo e(Form::text('qtdAndares','',['class'=>'form-control','required','placeholder' => 'Digite aqui'])); ?>
 
+<a class='btn btn-default' href="<?php echo e(url('bloco')); ?>">Voltar</a>
 <?php echo e(Form::submit('Cadastrar',['class'=>'btn btn-default'])); ?>
 
 <?php echo e(Form::close()); ?>

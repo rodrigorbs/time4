@@ -5,25 +5,29 @@
           <div class="row">
           	<div class="col s6 m6">
           		<p><strong>Campus</strong></p>
-          		Iesb Sul
+							@foreach($campus as $ncampus)
+               @if($ncampus->id == $bloco->campus_idCampus)
+                            {{$ncampus->nomeCampus}}
+                @endif
+							@endforeach
           	</div>
 
           	<div class="col s6 m6">
           		<p><strong>Bloco</strong></p>
-          		J
+          		{{$bloco->nameBlocos}}
           	</div>
 
           	<div class="col s6 m6">
           		<p><strong>QTD Andares</strong></p>
-          		3
+          		{{$bloco->qtdAndares}}
           	</div>
 
           </div>
         </div>
 
-        <div class="card-action">
-	        <a href="">  <i class="material-icons">edit</i></a>
-	        <a href="">  <i class="material-icons">delete</i></a>
+        <div class="card-action" align="right">
+	        <a href="/bloco/editar/{{$bloco->id}}">  <i class="material-icons">edit</i></a>
+	        <a href="/bloco/excluir/{{$bloco->id}}">  <i class="material-icons">delete</i></a>
         </div>
       </div>
     </div>

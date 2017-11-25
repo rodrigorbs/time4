@@ -14,7 +14,7 @@ class Campus extends Migration
     public function up()
     {
       Schema::create('campuses', function (Blueprint $table) {
-          $table->increments('idCampus');
+          $table->increments('id');
           $table->string('nomeCampus');
           $table->string('logradouro');
           $table->string('cidade');

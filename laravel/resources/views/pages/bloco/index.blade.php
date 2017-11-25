@@ -10,7 +10,22 @@ Bloco
 
 @section('conteudo')
 
-@include('pages.bloco.card.tableCampus')
-@include('pages.bloco.button.button')
+@forelse ($blocos as $bloco)
+		@include('pages.bloco.card.tableCampus')
+	@empty
 
+@endforelse
+
+	@include('pages.bloco.button.button')
+
+@if(Session::has('mensagem'))
+				{!!Session::get('mensagem')!!}
+@endif
+
+@if(Session::has('msg'))
+				{!!Session::get('msg')!!}
+@endif
+@if(Session::has('delMsg'))
+				{!!Session::get('delMsg')!!}
+@endif
 @stop()
