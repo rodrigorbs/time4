@@ -11,3 +11,7 @@ Route::get('/bloco/formulario', [
 	       'middleware'    => 'auth',
            'uses'          => 'BlocoController@formulario'
         ]);
+
+Route::post('/bloco/salvar', 'BlocoController@salvar');
+Route::get('/bloco/{id}/editar', 'BlocoController@editar');
+Route::get('/bloco/{id}/remover', 'BlocoController@remover');
