@@ -13,7 +13,11 @@ class BlocosMigration extends Migration
      */
     public function up()
     {
-        //
+      $table->increments('id');
+      $table->int('idCampus')->references('id')->on('campuses');
+      $table->string('nomeBlocos');
+      $table->string('qtdAndares');
+      $table->timestamps();
     }
 
     /**
@@ -23,6 +27,6 @@ class BlocosMigration extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('blocoes');
     }
 }
