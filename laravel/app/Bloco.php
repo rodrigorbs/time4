@@ -8,6 +8,6 @@ class Bloco extends Model
 {
     //
     protected $fillable = [
-        'nameBlocos', 'qtdAndares', 'campus_idCampus',
+        'nomeBlocos', 'qtdAndares', 'campus_idCampus',
     ];
 }

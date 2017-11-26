@@ -31,7 +31,7 @@
 @endforelse
 </select>
 {{Form::label('Bloco', 'Nome do Bloco')}}
-{{Form::text('nameBlocos','',['class'=>'form-control','required','placeholder' => 'Digite aqui'])}}
+{{Form::text('nomeBlocos','',['class'=>'form-control','required','placeholder' => 'Digite aqui'])}}
 {{Form::label('Andares', 'Quantidade de Andares')}}
 {{Form::text('qtdAndares','',['class'=>'form-control','required','placeholder' => 'Digite aqui'])}}
 <a class='btn btn-default' href="{{url('bloco')}}">Voltar</a>

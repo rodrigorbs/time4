@@ -9,8 +9,23 @@
 @stop
 
 @section('conteudo')
- 
- @include('pages.campus.card.tableCampus')
+ @forelse ($campus as $ncampus)
+ 		@include('pages.campus.card.tableCampus')
+		@empty
+
+	@endforelse
+
+
  @include('pages.campus.button.button')
 
+ @if(Session::has('mensagem'))
+ 				{!!Session::get('mensagem')!!}
+ @endif
+
+ @if(Session::has('msg'))
+ 				{!!Session::get('msg')!!}
+ @endif
+ @if(Session::has('delMsg'))
+ 				{!!Session::get('delMsg')!!}
+ @endif
 @stop()

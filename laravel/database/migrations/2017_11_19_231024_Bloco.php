@@ -15,7 +15,7 @@ class Bloco extends Migration
     {
       Schema::create('blocos', function (Blueprint $table) {
           $table->increments('id');
-          $table->string('nameBlocos');
+          $table->string('nomeBlocos');
           $table->integer('qtdAndares');
           $table->integer('campus_idCampus');
           $table->timestamps();

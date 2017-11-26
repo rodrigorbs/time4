@@ -1,5 +1,5 @@
 <div class="row">
-     <div class="col s4 m4">
+     <div class="col s3 m3">
       <div class="card hoverable">
         <div class="card-content">
           <div class="row">
@@ -15,7 +15,7 @@
 
           	<div class="col s6 m6">
           		<p><strong>Bloco</strong></p>
-          		<?php echo e($bloco->nameBlocos); ?>
+          		<?php echo e($bloco->nomeBlocos); ?>
 
           	</div>
 

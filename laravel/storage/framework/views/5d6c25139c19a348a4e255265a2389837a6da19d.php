@@ -32,7 +32,7 @@
 </select>
 <?php echo e(Form::label('Bloco', 'Nome do Bloco')); ?>
 
-<?php echo e(Form::text('nameBlocos','',['class'=>'form-control','required','placeholder' => 'Digite aqui'])); ?>
+<?php echo e(Form::text('nomeBlocos','',['class'=>'form-control','required','placeholder' => 'Digite aqui'])); ?>
 
 <?php echo e(Form::label('Andares', 'Quantidade de Andares')); ?>
 

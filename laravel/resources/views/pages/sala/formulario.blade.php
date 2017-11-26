@@ -10,60 +10,18 @@
 
 @section('conteudo')
 
-<div class="row">
-    <form class="col s12">
-      <div class="row">
-        <div class="col s2 m2">
-
-        </div>
-           <div class="col s8 m8">
-            <div class="card hoverable">
-              <div class="card-content">
-                <div class="row">
-
-                  <label>Campus</label>
-                  <select class="browser-default">
-                    <option value="" disabled selected>Selecione</option>
-                    <option value="1">Option 1</option>
-                    <option value="2">Option 2</option>
-                    <option value="3">Option 3</option>
-                  </select>
-
-                  <label>Bloco</label>
-                  <select class="browser-default">
-                    <option value="" disabled selected>Selecione</option>
-                    <option value="1">Option 1</option>
-                    <option value="2">Option 2</option>
-                    <option value="3">Option 3</option>
-                  </select>
-
-                  <div class="input-field col s6">
-                    <input id="nomeBloco" type="text" class="validate">
-                    <label for="last_name">BLoco</label>
-                  </div>
-
-                  <div class="input-field col s2">
-                    <input id="qtdAndares" type="text" class="validate">
-                    <label for="last_name">QTD Andares</label>
-                  </div>
-
-                </div>
-
-              </div>
-              <div class="card-action">
-                <a class="green darken-2 waves-light btn">
-                  <i>Gravar</i>
-                </a>
-                <a href="/sala" class="red lighten-2 waves-light btn"><i>Cancelar</i></a>
-
-              </div>
-            </div>
-          </div>
-          <div class="col s2 m2">
-
-          </div>
-      </div>
-    </form>
-  </div>
+{{Form::open(['action' => 'SalaController@formularioSala','method' => 'get'])}}
+{{Form::label('Campus', 'Selecione o Campus')}}
+<select class="browser-default" name="selecaoCampus">
+		@forelse ($campus as $ncampus)
+							<option value= "{{$ncampus->id}}">{{$ncampus->nomeCampus}}</option>
+		@empty
+							<option value="" disabled selected>Selecione</option>
+		@endforelse
+</select>
+</br></br></br>
+<a class='btn btn-default' href="{{url('sala')}}">Voltar</a>
+{{Form::submit('Selecionar',['class'=>'btn btn-default'])}}
+{{Form::close()}}
 
 @stop()

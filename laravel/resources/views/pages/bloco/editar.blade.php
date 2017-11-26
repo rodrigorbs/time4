@@ -23,7 +23,7 @@
 
 
 	{{Form::label('Bloco', 'Nome do Bloco')}}
-	{{Form::text('nameBlocos',$blocos->nameBlocos,['class'=>'form-control','required','placeholder' => 'Digite aqui'])}}
+	{{Form::text('nomeBlocos',$blocos->nomeBlocos,['class'=>'form-control','required','placeholder' => 'Digite aqui'])}}
 	{{Form::label('Andares', 'Quantidade de Andares')}}
 	{{Form::text('qtdAndares',$blocos->qtdAndares,['class'=>'form-control','required','placeholder' => 'Digite aqui'])}}
 		<a class='btn btn-default' href="{{url('bloco')}}">Voltar</a>

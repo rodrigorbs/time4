@@ -5,39 +5,39 @@
           <div class="row">
           	<div class="col s6 m6">
           		<p><strong>Campus</strong></p>
-          		Iesb Sul
+              {{$ncampus->nomeCampus}}
           	</div>
 
           	<div class="col s6 m6">
           		<p><strong>Logradouro</strong></p>
-          		Quadra 20
+              {{$ncampus->logradouro}}
           	</div>
 
           	<div class="col s6 m6">
           		<p><strong>Cidade</strong></p>
-          		Asa Sul
+              {{$ncampus->cidade}}
           	</div>
 
           	<div class="col s6 m6">
           		<p><strong>Uf</strong></p>
-          		Df
+              {{$ncampus->uf}}
           	</div>
 
           	<div class="col s6 m6">
           		<p><strong>Cep</strong></p>
-          		75.005-780
+              {{$ncampus->cep}}
           	</div>
 
           	<div class="col s6 m6">
           		<p><strong>Fone</strong></p>
-          		(61)9 0000-0000
+              {{$ncampus->telefone}}
           	</div>
           </div>
 
         </div>
-        <div class="card-action">
-	        <a href="">  <i class="material-icons">edit</i></a>
-	        <a href="">  <i class="material-icons">delete</i></a>
+        <div class="card-action" align="right">
+	        <a href="/campus/editar/{{$ncampus->id}}">  <i class="material-icons">edit</i></a>
+	        <a href="/campus/excluir/{{$ncampus->id}}">  <i class="material-icons">delete</i></a>
         </div>
       </div>
     </div>

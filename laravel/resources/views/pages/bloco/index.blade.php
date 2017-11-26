@@ -11,10 +11,12 @@ Bloco
 @section('conteudo')
 
 @forelse ($blocos as $bloco)
+
 		@include('pages.bloco.card.tableCampus')
 	@empty
 
 @endforelse
+
 
 	@include('pages.bloco.button.button')
 

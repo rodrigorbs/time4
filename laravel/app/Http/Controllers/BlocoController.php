@@ -15,11 +15,7 @@ class BlocoController extends Controller
     	return view('pages.bloco.index', array('campus' => $campus, 'blocos' => $blocos));
     }
 
-//    public function edit($id)
-//    {
-//      $blocos = Bloco::find($id);
-//    	return view('pages.bloco.editar', array('blocos' => $blocos));
-//    }
+
     public function edit($id, Campus $campus, Bloco $bloco)
     {
       $blocos = Bloco::find($id);
@@ -32,7 +28,7 @@ class BlocoController extends Controller
 
       $bloco = Bloco::find($id);
       $bloco->campus_idCampus = $request->input('selecao');
-      $bloco->nameBlocos = $request->input('nameBlocos');
+      $bloco->nomeBlocos = $request->input('nomeBlocos');
       $bloco->qtdAndares = $request->input('qtdAndares');
       if($bloco->save()){
        Session::flash('msg', '<script> alert("Bloco Atualizado!!!")</script>');
@@ -42,7 +38,7 @@ class BlocoController extends Controller
     }
 
 
-    public function formulario(Campus $campus, Bloco $bloco)
+    public function formulario()
     {
       $blocos = Bloco::all();
       $campus = Campus::all();
@@ -51,7 +47,7 @@ class BlocoController extends Controller
 
     public function store(Request $request, Bloco $bloco){
       $this->validate($request,[
-            'nameBlocos' => 'required|min:3',
+            'nomeBlocos' => 'required|min:3',
             'qtdAndares' => 'required|numeric|max:10',
       ]);
 
@@ -59,7 +55,7 @@ class BlocoController extends Controller
         $bloco = Bloco::find($request->id);
       }
         $bloco->campus_idCampus = $request->input('selecao');
-        $bloco->nameBlocos = $request->input('nameBlocos');
+        $bloco->nomeBlocos = $request->input('nomeBlocos');
         $bloco->qtdAndares = $request->input('qtdAndares');
         if($bloco->save()){
          Session::flash('mensagem', '<script> alert("Concluído!!! Bloco Cadastrado com sucesso!!!")</script>');

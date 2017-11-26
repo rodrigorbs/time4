@@ -1,5 +1,5 @@
 <div class="row">
-     <div class="col s4 m4">
+     <div class="col s3 m3">
       <div class="card hoverable">
         <div class="card-content">
           <div class="row">
@@ -14,7 +14,7 @@
 
           	<div class="col s6 m6">
           		<p><strong>Bloco</strong></p>
-          		{{$bloco->nameBlocos}}
+          		{{$bloco->nomeBlocos}}
           	</div>
 
           	<div class="col s6 m6">

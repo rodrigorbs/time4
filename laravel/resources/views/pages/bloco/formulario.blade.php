@@ -1,11 +1,11 @@
 @extends('template.base')
 
 @section('titulo')
-	Cadastro de Bloco
+	Cadastro de Sala
 @stop
 
 @section('pagina')
-	Formulario Bloco
+	Formulario Sala
 @stop
 
 @section('conteudo')
@@ -25,7 +25,7 @@
                   <select class="browser-default">
                     <option value="" disabled selected>Selecione</option>
 										@foreach ($blocos as $bloco)
-												<option value= "{{$bloco->id}}">{{$bloco->nameBlocos}}</option>
+												<option value= "{{$bloco->id}}">{{$bloco->nomeBlocos}}</option>
 										@endforeach
 <!--                    <option value="1">Option 1</option>
                     <option value="2">Option 2</option>
