@@ -23,6 +23,7 @@ Route::get('/',['as' =>'root','uses'=>function (){
 
 }]);
 
+
 Auth::routes();
 
 require_once base_path('routes/imports/imageUpload.php');
@@ -32,3 +33,4 @@ require_once base_path('routes/imports/bloco.php');
 require_once base_path('routes/imports/sala.php');
 require_once base_path('routes/imports/rota.php');
 require_once base_path('routes/imports/grade.php');
+require_once base_path('routes/imports/disciplina.php');

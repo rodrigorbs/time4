@@ -75,7 +75,7 @@ public function update($id, Request $request)
         $sala->andar = $request->input('andar');
         $sala->capacidade = $request->input('capacidade');
           if($sala->save()){
-                   Session::flash('msg', '<script> alert("Sala Atualizado!!!")</script>');
+                   Session::flash('msg', '<script> alert("Sala Atualizada!!!")</script>');
                     return redirect('sala');
                                   }
 

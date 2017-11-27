@@ -86,7 +86,13 @@
                 </a>
             </li>
 
+            <li>
+                <a href="/disciplina" class="collapsible-header waves-effect bold">
+                    <i class="material-icons">assignment</i>Disciplinas
+                </a>
+            </li>
+
+
         </ul>
     </li>
 </ul>
-

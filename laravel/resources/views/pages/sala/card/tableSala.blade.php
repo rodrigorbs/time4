@@ -39,7 +39,7 @@
           </div>
         </div>
 
-        <div class="card-action">
+        <div class="card-action" align="right">
 	        <a href="/sala/editar/{{$sala->id}}">  <i class="material-icons">edit</i></a>
 	        <a href="/sala/excluir/{{$sala->id}}">  <i class="material-icons">delete</i></a>
         </div>

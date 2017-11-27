@@ -9,8 +9,25 @@ Grade
 @stop
 
 @section('conteudo')
+  @forelse ($grades as $grade)
 
-@include('pages.grade.card.tableGrade')
+      @include('pages.grade.card.tableGrade')
+      @empty
+
+  @endforelse
+
 @include('pages.grade.button.button')
+
+
+@if(Session::has('mensagem'))
+				{!!Session::get('mensagem')!!}
+@endif
+
+@if(Session::has('msg'))
+				{!!Session::get('msg')!!}
+@endif
+@if(Session::has('delMsg'))
+				{!!Session::get('delMsg')!!}
+@endif
 
 @stop()
