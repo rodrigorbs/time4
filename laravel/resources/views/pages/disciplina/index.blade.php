@@ -28,5 +28,8 @@ Disciplinas
 @if(Session::has('delMsg'))
       {!!Session::get('delMsg')!!}
 @endif
+<div class="" align="center">
+{{$disciplinas->links()}}
+</div>
 
 @stop()

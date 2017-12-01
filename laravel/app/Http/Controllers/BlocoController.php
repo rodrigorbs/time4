@@ -10,7 +10,7 @@ class BlocoController extends Controller
 {
     public function index()
     {
-      $blocos = Bloco::all();
+      $blocos = Bloco::paginate(5);
       $campus = Campus::all(['id', 'nomeCampus']);
     	return view('pages.bloco.index', array('campus' => $campus, 'blocos' => $blocos));
     }

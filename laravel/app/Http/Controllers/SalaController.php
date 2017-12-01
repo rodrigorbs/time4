@@ -12,7 +12,7 @@ class SalaController extends Controller
 {
     public function index()
     {
-      $salas = Sala::all();
+      $salas = Sala::paginate(5);
       $blocos = Bloco::all(['id', 'nomeBlocos']);
       $campus = Campus::all(['id', 'nomeCampus']);
 
@@ -28,17 +28,19 @@ class SalaController extends Controller
     public function formularioSala(Request $request)
     {
       $salas = Sala::all();
-      $blocos = Bloco::all();
       $campus = Campus::find($request->input('selecaoCampus'));
+      $blocos = Bloco::where('campus_idCampus', 'LIKE',$request->input($campus->id))
+        ->orderBy('nomeBlocos')
+            ->get();
 
 		return view('pages.sala.criar', array('campus' => $campus, 'blocos' => $blocos, 'salas' => $salas));
     }
 
 
-    public function store($id, Request $request, Sala $sala){
+    public function store($id, Request $request, Sala $sala, Bloco $blocos){
       $this->validate($request,[
             'nomeSalas' => 'required|min:3',
-            'andar' => 'required|numeric|max:10',
+            'andar' => 'required|numeric|max:10|same:$blocos->qtdAndares',
             'capacidade' => 'required|numeric|min:10|max:150',
       ]);
 
@@ -46,6 +48,7 @@ class SalaController extends Controller
         $sala = Sala::find($request->id);
       }
 
+        $blocos = Bloco::find($request->input('selecaoBlocos'));
         $sala->blocos_idCampus = $id;
         $sala->blocos_idBlocos = $request->input('selecaoBlocos');
         $sala->nomeSalas = $request->input('nomeSalas');

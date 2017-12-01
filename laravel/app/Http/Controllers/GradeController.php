@@ -12,7 +12,7 @@ class GradeController extends Controller
 {
 public function index()
   {
-  $grades = Grade::all();
+  $grades = Grade::paginate(5);
   $campus = Campus::all(['id', 'nomeCampus']);
     	return view('pages.grade.index', array('campus' => $campus, 'grades' => $grades));
   }

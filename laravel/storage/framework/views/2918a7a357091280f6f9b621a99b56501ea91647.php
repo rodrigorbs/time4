@@ -24,7 +24,7 @@
 
 	<?php echo e(Form::label('Bloco', 'Nome do Bloco')); ?>
 
-	<?php echo e(Form::text('nameBlocos',$blocos->nameBlocos,['class'=>'form-control','required','placeholder' => 'Digite aqui'])); ?>
+	<?php echo e(Form::text('nomeBlocos',$blocos->nomeBlocos,['class'=>'form-control','required','placeholder' => 'Digite aqui'])); ?>
 
 	<?php echo e(Form::label('Andares', 'Quantidade de Andares')); ?>
 

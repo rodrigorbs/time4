@@ -9,7 +9,7 @@ class CampusController extends Controller
 {
   public function index()
     {
-    $campus = Campus::all();
+    $campus = Campus::paginate(5);
 		return view('pages.campus.index', array('campus' => $campus));
     }
 

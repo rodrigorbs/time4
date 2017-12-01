@@ -29,6 +29,12 @@
  				<?php echo Session::get('delMsg'); ?>
 
  <?php endif; ?>
+
+ <div class="" align="center">
+ <?php echo e($campus->links()); ?>
+
+</div>
+
 <?php $__env->stopSection(); ?>
 
 <?php echo $__env->make('template.base', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

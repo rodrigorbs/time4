@@ -11,10 +11,6 @@ Dashboard
 <div class="row">
     <h5 class="center">Bem vindo ao Localize</h5>
 </div>
-<?php if(Session::has('mensagem')): ?>
-				<?php echo Session::get('mensagem'); ?>
-
-<?php endif; ?>
 
 <?php $__env->stopSection(); ?>
 

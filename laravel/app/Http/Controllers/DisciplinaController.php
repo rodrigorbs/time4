@@ -15,7 +15,7 @@ class DisciplinaController extends Controller
 {
   public function index(Grade $grades, Campus $campus, Bloco $blocos, Sala $salas, Disciplina $disciplinas)
     {
-    $disciplinas = Disciplina::all();
+    $disciplinas = Disciplina::paginate(5);
     $grades = Grade::all();
     $campus = Campus::all();
     $blocos = Bloco::all();
@@ -40,7 +40,6 @@ class DisciplinaController extends Controller
             'nomeDisciplina' => 'required|min:3|max:150',
             'cargaHoraria' => 'required|numeric|max:1000',
             'dataDia' => 'required|in:"segunda-feira","terça-feira","quarta-feira","quinta-feira","sexta-feira","sábado","domingo"|min:3|max:15',
-//git commit -m "Novos CRUD's com exceção de rotas. Alteração no MER e inclusão no menu e controller DISCIPLINA. Obs: "
       ]);
 
       if($request->has('id')){

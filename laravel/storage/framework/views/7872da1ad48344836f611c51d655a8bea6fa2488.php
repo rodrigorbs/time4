@@ -25,7 +25,7 @@
   <div class="col s6 m6" align="center">
     <?php echo e(Form::label('Bloco', 'Nome do Bloco')); ?>
 
-    <?php echo e($blocos->nameBlocos); ?>
+    <?php echo e($blocos->nomeBlocos); ?>
 
   </div>
 </br>
@@ -42,7 +42,7 @@
     <div class="col s6 m6" align="center">
 		    <a class='btn btn-default' href="<?php echo e(url('bloco')); ?>">Voltar</a>
         <a class='btn btn-default' href="/bloco/editar/<?php echo e($blocos->id); ?>">Editar</i></a>
-           <?php echo e(Form::submit('Excluir?',['class'=>'btn btn-default'])); ?>
+           <?php echo e(Form::submit('Excluir',['class'=>'btn btn-default'])); ?>
 
 
   </div>

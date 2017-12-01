@@ -29,5 +29,7 @@ Grade
 @if(Session::has('delMsg'))
 				{!!Session::get('delMsg')!!}
 @endif
-
+<div class="" align="center">
+{{$grades->links()}}
+</div>
 @stop()

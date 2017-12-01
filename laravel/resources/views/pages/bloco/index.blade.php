@@ -30,4 +30,8 @@ Bloco
 @if(Session::has('delMsg'))
 				{!!Session::get('delMsg')!!}
 @endif
+<div class="" align="center">
+{{$blocos->links()}}
+</div>
+
 @stop()
